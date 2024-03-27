@@ -1,0 +1,43 @@
+#hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/images/locationHero.jpeg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  
+}
+#hero:before {
+  content: "";
+  background:  linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* Tablet and Mobile View */
+@media (max-width: 991.98px) {
+  #team .section-title[data-aos="zoom-in"] {
+    /* Apply any alternative styling or simply remove the zoom-in effect */
+    /* For example, you can set transition to none */
+    transition: none !important;
+  }
+}
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  #hero {
+    background-position: left center;
+  }
+}
+
+a.email-link {
+    text-decoration: underline;
+    color: #0000EE;
+    cursor: pointer;
+}
+
+a.email-link:hover {
+    color: #FF4500;
+}

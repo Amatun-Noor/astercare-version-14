@@ -1,0 +1,102 @@
+#hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/images/loactio-1-herbg.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  
+}
+#hero:before {
+  content: "";
+  background:  linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+a.email-link {
+    text-decoration: underline;
+    color: #0000EE;
+    cursor: pointer;
+}
+
+a.email-link:hover {
+    color: #FF4500;
+}
+
+.new{
+    padding-top: 0px !important;
+}
+
+
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+    .features-img-bg {
+      order: -1; /* Move the image to the beginning of the flex container */
+    }
+  
+    .who-are-we {
+      order: 0; /* Reset the order for the details div */
+    }
+  }
+  
+  /* For tablets and larger devices */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .features-img-bg {
+      order: -1; /* Move the image to the beginning of the flex container */
+    }
+  
+    .who-are-we {
+      order: 0; /* Reset the order for the details div */
+    }
+  }
+
+
+    /*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery {
+  overflow: hidden;
+  background-color: white;
+}
+
+.gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #034168;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #034168;
+}
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+
+  .gallery .swiper-slide-active {
+    border: 6px solid #034168;
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    transform: scale(1.2);
+    margin-top: 10px;
+  }
+}

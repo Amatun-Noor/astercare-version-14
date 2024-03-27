@@ -1,0 +1,124 @@
+#hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/images/service-updated-banner.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  
+}
+#hero:before {
+  content: "";
+  background:  linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0));
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  #hero {
+    background-position: calc(100% - 30%) center;
+  }
+}
+
+/* Tablet and Mobile View */
+@media (max-width: 991.98px) {
+  #values .container[data-aos="fade-up"] {
+    /* Apply any alternative styling or simply remove the zoom-in effect */
+    /* For example, you can set transition to none */
+    transition: none !important;
+  }
+
+  #values .section-title[data-aos="zoom-in"] {
+    /* Apply any alternative styling or simply remove the zoom-in effect */
+    /* For example, you can set transition to none */
+    transition: none !important;
+  }
+
+}
+
+a.email-link {
+    text-decoration: underline;
+    color: #0000EE;
+    cursor: pointer;
+}
+
+a.email-link:hover {
+    color: #FF4500;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+
+ul.b {
+    list-style-type: square;
+    font-family: 'Poppins', Arial, sans-serif;
+
+  }
+
+
+.featured-services .service-item {
+    position: relative;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .featured-services .service-item .icon {
+    margin-right: 20px;
+  }
+  
+  .featured-services .service-item .icon i {
+    color: #024e7c;
+    font-size: 48px;
+    transition: 0.3s;
+    padding: 10px;
+  }
+  
+ 
+  
+  
+  .featured-services .service-item .title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--color-secondary);
+    transition: 0.3s;
+  }
+  
+  .featured-services .service-item .description {
+    font-size: 15px;
+    color: #132848;
+    margin-bottom: 10px;
+    font-family: 'Poppins', Arial, sans-serif;
+  }
+  
+  .featured-services .service-item .readmore {
+    display: flex;
+    align-items: center;
+    color: var(--color-secondary);
+    transition: 0.3s;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  .featured-services .service-item .readmore i {
+    margin-left: 8px;
+  }
+  
+  .featured-services .service-item:hover .title,
+  .featured-services .service-item:hover .readmore,
+  .featured-services .service-item:hover .icon i {
+    color: #fec224;
+  }
+  

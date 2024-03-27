@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slideshow</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .text {
+            color: white;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .prev, .next {
+                font-size: 12px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="assets/img/images/heroAboutus.png" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+        <img src="assets/img/images/heroCareer.jpg" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+        <img src="assets/img/images/heroContact.png" alt="Image 3">
+    </div>
+
+        <div class="mySlides">
+        <img src="assets/img/images/heroAboutus.png" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+        <img src="assets/img/images/heroCareer.jpg" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+        <img src="assets/img/images/heroContact.png" alt="Image 3">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="text"></div>
+</div>
+
+<script>
+    let slideIndex = 0;
+    let timer;
+
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+        const text = document.querySelector('.text');
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        text.textContent = `Image ${slideIndex} of ${slides.length}`;
+        timer = setTimeout(showSlides, 5000); // Change slide every 5 seconds
+    }
+
+    function plusSlides(n) {
+        clearTimeout(timer);
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        clearTimeout(timer);
+        showSlides(slideIndex = n);
+    }
+</script>
+
+</body>
+</html>

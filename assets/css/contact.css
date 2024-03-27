@@ -1,0 +1,142 @@
+#hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/images/contactHero.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  
+}
+#hero:before {
+  content: "";
+  background:  linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/* Tablet and Mobile View */
+@media (max-width: 991.98px) {
+  #contact .section-title[data-aos="zoom-in"] {
+    /* Apply any alternative styling or simply remove the zoom-in effect */
+    /* For example, you can set transition to none */
+    transition: none !important;
+  }
+}
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team .member .member-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  
+  width: 50%;}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #fec224;
+  margin: 0 3px;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  background: rgba(143, 192, 78, 0.8);
+  display: inline-block;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a:hover {
+  background: #8fc04e;
+}
+
+.team .member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #fec224;
+  font-size: 25px;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.team .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+
+#team .btn-get-started:hover {
+  background: #d07600;
+  color: rgb(0, 0, 0);
+  
+}
+
+#team .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 0px;
+  transition: 0.5s;
+  margin: 10px;
+  text-transform: none;
+  background-color: #fec224;
+  color: rgb(0, 0, 0);
+  top:50%;
+  left: 50%;
+}
